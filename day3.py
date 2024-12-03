@@ -3,10 +3,7 @@ import re
 def part1(input):
     matcher = r"mul\((\d+),(\d+)\)"
     matches = re.findall(matcher, input)
-    sum = 0
-    for match in matches:
-        sum += int(match[0]) * int(match[1])
-    return sum
+    return sum([int(match[0]) * int(match[1]) for match in matches])
 
 
 def part2(input):
